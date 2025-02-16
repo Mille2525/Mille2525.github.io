@@ -1,1 +1,64 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Access</title>
+    <style>
+        body {
+            background-color: black;
+            color: limegreen;
+            /* or just green */
+            font-family: monospace, monospace;
+            /* Monospace for hacker look */
+            font-size: 2em;
+            /* Large font */
+            display: flex;
+            /* For centering */
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+            min-height: 100vh;
+            /* Ensure full viewport height */
+            margin: 0;
+            /* Remove default body margin */
+            padding: 0;
+            /* Remove default body padding */
+            text-align: center;
+            /* Center text within the container */
+            display: none;
+            /* Initially hide the body content */
+        }
+
+        #content {
+            padding: 20px;
+            /* Optional padding for content */
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            const password = "54865"; // **CHANGE THIS PASSWORD!**
+            let enteredPassword = prompt("Enter Password to Unlock Site:");
+
+            if (enteredPassword === password) {
+                document.body.style.display = 'flex'; // Show the body content
+            } else {
+                document.body.innerHTML = '<div style="color: red; font-size: 1.5em;">Access Denied. Incorrect Password.</div>';
+                document.body.style.display = 'flex'; // Show error message
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div id="content">
+        <h1>Welcome to the Secret System</h1>
+        <p>Access Granted. Proceed with Caution.</p>
+        <p>Initiating Mainframe Sequence...</p>
+        <!-- Add more hacker-style text or elements here -->
+    </div>
+</body>
+
+</html>
